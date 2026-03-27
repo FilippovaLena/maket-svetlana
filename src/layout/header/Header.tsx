@@ -1,28 +1,14 @@
-import React from 'react';
+import styled from 'styled-components';
+import {Menu} from "../../components/menu/Menu.tsx";
 
 export const Header = () => {
     return (
-        <header>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="">Home</a>
-                    </li>
-                    <li>
-                        <a href="">Skills</a>
-                    </li>
-                    <li>
-                        <a href="">Works</a>
-                    </li>
-                    <li>
-                        <a href="">Testimony</a>
-                    </li>
-                    <li>
-                        <a href="">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+        <StyledHeader>
+            <Menu></Menu>
+        </StyledHeader>
     );
 };
 
+const StyledHeader = styled.header`
+    background-color: pink;
+`
