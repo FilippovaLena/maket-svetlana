@@ -11,13 +11,14 @@ export const Main = () => {
                     <Name>I am Svetlana Dyablo</Name>
                     <MainTitle>A Web Developer.</MainTitle>
                 </div>
+
                 <Photo src={photo} alt=""/>
             </FlexWrapper>
         </StyledMain>
     );
 };
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
 min-height: 100vh`
 
 const Photo = styled.img`
