@@ -15,7 +15,7 @@ export const Works = () => {
             <Container>
                 <SectionTitle>My Works</SectionTitle>
                 <TabMenu menuItems={worksItems}/>
-                <FlexWrapper justify={'space-between'}>
+                <FlexWrapper justify={'space-between'} align={'flex-start'}>
                     <Work title={"Social Network"}
                           src={socialImg}
                           text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."}/>

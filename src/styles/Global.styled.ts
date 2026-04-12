@@ -33,10 +33,6 @@ export const GlobalStyle = createGlobalStyle`
         border: none;
         cursor: pointer;
         color: ${theme.colors.font};
-        font-weight: 400;
-        font-size: 14px;
-        letter-spacing: 0.07em;
-        text-transform: uppercase;
     }
 
     section {
