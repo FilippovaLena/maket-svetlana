@@ -1,6 +1,6 @@
-import {Icon} from "../../../../components/icon/Icon";
-import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../../components/FlexWrapper.ts";
 import {S} from "./../Skills_Styles.ts"
+import {Icon} from "../../../../components/icon/Icon.tsx";
 
 type SkillPropsType = {
     iconId: string

@@ -1,5 +1,5 @@
 import photo from "../../../assets/images/photo.webp"
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {Container} from "../../../components/Container.ts";
 import React from "react";
 import {S} from "./Main_Styles.ts"

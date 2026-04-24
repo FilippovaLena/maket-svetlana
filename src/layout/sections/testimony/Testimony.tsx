@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import {SectionTitle} from "../../../components/SectionTitle.tsx";
-import {Icon} from "../../../components/icon/Icon.tsx";
+import {SectionTitle} from "../../../components/SectionTitle.ts";
 import {Slider} from "../../../components/slider/Slider.tsx";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-//import {IconWrapper} from "../skills/skill/Skill.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {Container} from "../../../components/Container.ts";
 import {S} from "./../skills/Skills_Styles.ts"
+import React from "react";
+import {Icon} from "../../../components/icon/Icon.tsx";
 
-export const Testimony = () => {
+export const Testimony: React.FC = () => {
     return (
         <StyledTestimony>
             <Container>
