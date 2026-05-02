@@ -89,19 +89,6 @@ const Title = styled.h3``
 const Text = styled.p`
 margin: 14px 0 10px`
 
-const TabMenu = styled.nav`
-    
-ul {
-    display: flex;
-    justify-content: space-between;
-    max-width: 352px;
-    width: 100%;
-    margin: 0 auto 40px;
-}`
-
-const ListItem = styled.li`
-`
-
 export const S = {
     Works,
     Work,
@@ -109,7 +96,5 @@ export const S = {
     Image,
     Description,
     Title,
-    Text,
-    TabMenu,
-    ListItem
+    Text
 }
