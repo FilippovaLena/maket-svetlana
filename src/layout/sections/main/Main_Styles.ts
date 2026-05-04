@@ -44,8 +44,11 @@ object-fit: cover;
 `
 
 const MainTitle = styled.h1`
-        ${font({weight: 400, Fmax: 27, Fmin: 20})}
-
+        ${font({weight: 400, Fmax: 27, Fmin: 20})};
+        
+    p {
+        display: none;
+    }
     `
 
 
