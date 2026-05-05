@@ -5,6 +5,8 @@ import {Link} from "../../../components/Link.ts";
 import {Button} from "../../../components/Button.ts";
 
 const Works = styled.section`
+    position: relative;
+
     ${FlexWrapper} {
         gap: 30px;
     }
@@ -14,22 +16,22 @@ const Work = styled.div`
     background-color: ${theme.colors.secondaryBg};
     width: 330px;
     flex-grow: 1;
-    
+
     ${Link} {
         padding: 10px 0;
-        
+
         & + ${Link} {
             margin-left: 20px;
         }
     }
-    
+
     @media ${theme.media.desktop} {
         max-width: 540px;
     }
 `
 const ImageWrapper = styled.div`
     position: relative;
-    
+
     ${Button} {
         opacity: 0;
         position: absolute;
@@ -54,17 +56,17 @@ const ImageWrapper = styled.div`
         backdrop-filter: blur(8px);
         opacity: 0;
     }
-    
+
     &:hover {
         &::before {
             opacity: 1;
         }
-        
+
         ${Button} {
-                opacity: 1;
-            }
+            opacity: 1;
         }
-    
+    }
+
     @media ${theme.media.tablet} {
         &::before {
             opacity: 1;
@@ -77,9 +79,9 @@ const ImageWrapper = styled.div`
 `
 
 const Image = styled.img`
-width: 100%;
-height: 260px;
-object-fit: cover`
+    width: 100%;
+    height: 260px;
+    object-fit: cover`
 
 const Description = styled.div`
     padding: 25px 20px;`
@@ -87,7 +89,7 @@ const Description = styled.div`
 const Title = styled.h3``
 
 const Text = styled.p`
-margin: 14px 0 10px`
+    margin: 14px 0 10px`
 
 export const S = {
     Works,

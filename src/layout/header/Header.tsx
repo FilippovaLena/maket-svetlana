@@ -5,7 +5,6 @@ import React from 'react';
 import {S} from "./Header_Styles.ts"
 import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu.tsx";
 
-const items = ["Home", "Skills", "Works", "Testimony", "Contact"]
 
 export const Header: React.FC = () => {
 
@@ -15,8 +14,8 @@ export const Header: React.FC = () => {
     React.useEffect(() => {
         const handleWindowResize = () => setWidth(window.innerWidth)
         window.addEventListener("resize", handleWindowResize);
-
-        return () => window.removeEventListener("resize", handleWindowResize);
+        return () => window.removeEventListener("resize",
+            handleWindowResize);
     }, []);
 
     return (
@@ -24,8 +23,8 @@ export const Header: React.FC = () => {
             <Container>
                 <FlexWrapper justify={'space-between'} align={'center'}>
 
-                    {width < breakpoint ? <MobileMenu menuItems={items}/>
-                                        : <DesktopMenu menuItems={items}/>}
+                    {width < breakpoint ? <MobileMenu />
+                                        : <DesktopMenu />}
 
                 </FlexWrapper>
                 </Container>

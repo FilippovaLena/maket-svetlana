@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme.ts";
 
 const Contacts = styled.section`
+position: relative;
 `
 
 const Form = styled.form`
