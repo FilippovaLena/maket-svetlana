@@ -7,8 +7,11 @@ import {Container} from "../../../components/Container.ts";
 import {S} from "./Works_Styles.ts"
 import React, {useState} from "react"
 import {TabMenu, type TabsStatusType} from "./tabMenu/TabMenu.tsx";
+import {AnimatePresence} from "motion/react"
+import {motion} from "motion/react"
 
-const tabsItems: Array<{status: TabsStatusType, title: string}> = [
+
+const tabsItems: Array<{ status: TabsStatusType, title: string }> = [
     {
         title: "All",
         status: "all"
@@ -35,20 +38,22 @@ const worksData = [
         title: "Social Network",
         src: socialImg,
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-        type: "spa"
+        type: "spa",
+        id: 1
     },
 
     {
         title: "Timer",
         src: socialTimer,
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim",
-        type: "react"
+        type: "react",
+        id: 2
     },
 ]
 
 export const Works: React.FC = () => {
-const [currentFilterStatus, setCurrentFilterStatus] = useState("all")
-let filteredWorks = worksData
+    const [currentFilterStatus, setCurrentFilterStatus] = useState("all")
+    let filteredWorks = worksData
 
     if (currentFilterStatus === "landing") {
         filteredWorks = worksData.filter(work => work.type === "landing")
@@ -73,11 +78,26 @@ let filteredWorks = worksData
                 <TabMenu tabsItems={tabsItems} changeFilterStatus={changeFilterStatus}
                          currentFilterStatus={currentFilterStatus}/>
                 <FlexWrapper justify={'space-between'} align={'flex-start'} wrap={'wrap'}>
-                    {filteredWorks.map((w) => {
-                        return <Work title={w.title}
-                                     src={w.src}
-                                     text={w.text}/>
-                    })}
+
+                    <AnimatePresence>
+                        {filteredWorks.map((w) => {
+                            return (
+                                <motion.div style={{width: "400px", flexGrow: 1, maxWidth: "540px"}}
+                                    layout
+                                    initial={{opacity: 0}}
+                                    animate={{opacity: 1}}
+                                    exit={{opacity: 0}}
+                                    key={w.id}
+                                >
+                                    <Work title={w.title}
+                                          src={w.src}
+                                          text={w.text}
+                                          key={w.id}
+                                    />
+                                </motion.div>
+                            )
+                        })}
+                    </AnimatePresence>
 
                 </FlexWrapper>
             </Container>
